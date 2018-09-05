@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="MessageBoardController">
+  <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+  <aura:attribute name="messageBoard" type="MessageBoard__c"/>
+  <p>
+    Message:<ui:outputText value="{!v.messageBoard.Message__c}"/>
+  </p>
+  <ui:button label="update message" press="{!c.updateMessage}"/>
+</aura:component>
